@@ -1,0 +1,32 @@
+body {
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr 2fr;
+  background-image: linear-gradient(to top right, pink, rgb(80, 176, 255));
+  padding-left: 30px;
+}
+
+#content {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-rows: 2fr repeat(3, 1fr);
+}
+header {
+  display: flex;
+  grid-column: 1 / 4;
+  justify-content: space-evenly;
+  padding-right: 30px;
+}
+h2 {
+  /* width: 400px; */
+  text-align: center;
+  grid-column: 1/4;
+}
+button {
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(44, 155, 252);
+  padding: 10px;
+}
