@@ -43,6 +43,7 @@
 * {
   padding: 0;
   margin: 0;
+  border: none;
   --_fontFamily: var(--fontFamily, , inherit);
   --_fontColor: var(--fontColor, inherit);
   --_padding: var(--padding, inherit);
@@ -95,23 +96,27 @@ h2 {
   padding: var(--_padding);
   /* text-align: center; */
 }
-button {
-  --padding: 1em;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  background: none;
-  padding: var(--_padding);
-}
 nav {
   padding: var(--_padding);
   max-height: fit-content;
+  padding-left: 0;
 }
+button {
+  --padding: 1em;
+  --fontFamily: "gondolaSDRegular";
+  border-radius: 8px;
+  color: white;
+  background: none;
+
+  font-family: var(--_fontFamily);
+  padding: var(--_padding);
+}
+
+/*photo credit*/
 a {
   text-decoration: none;
   color: unset;
 }
-
 .photo-credit {
   --fontSize: 0.75em;
   position: absolute;
