@@ -1,15 +1,23 @@
+import { dummyTextOne } from "./text.js";
+
 function pageLoad() {
-  const divContent = document.getElementById("content");
+  const header = document.querySelector("header");
+  const headerDiv = document.createElement("div");
   const headline = document.createElement("h2");
+  header.prepend(headline);
+
+  const divContent = document.getElementById("content");
+
   const divOne = document.createElement("div");
-  const divTwo = document.createElement("div");
-  const divThree = document.createElement("div");
 
-  headline.textContent = "Chop n Die";
-  divOne.textContent = "Div 1";
-  divTwo.textContent = "Div 2";
-  divThree.textContent = "Div 3";
+  headline.textContent = "Fancy Lads";
+  divOne.textContent = dummyTextOne;
 
-  divContent.append(headline, divOne, divTwo, divThree);
+  divContent.appendChild(divOne);
 }
 export { pageLoad };
+
+//Photo Credits
+
+// Photo by <a href="https://unsplash.com/@jaywennington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jay Wennington</a> on <a href="https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+// Photo by <a href="https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jason Leung</a> on <a href="https://unsplash.com/photos/photo-of-pub-set-in-room-during-daytime-poI7DelFiVA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
