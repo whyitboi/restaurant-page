@@ -4,23 +4,24 @@ import { displayHome } from "./home.js";
 import { displayMenu } from "./menu.js";
 import { displayAbout } from "./about.js";
 
+//change code to follow Open-closed principle
+//remove switch case
+
+//pages holds key and value. Value is function name but not called until clicked.
+//see event listener
+const pages = {
+  home: displayHome,
+  about: displayAbout,
+  menu: displayMenu,
+};
+
+//get all the buttons
 const buttons = document.querySelectorAll("button");
 
+//check them against the Object pages and then call the related function
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    switch (button.id) {
-      case "home":
-        displayHome();
-        break;
-      case "about":
-        displayAbout();
-        break;
-      case "menu":
-        displayMenu();
-        break;
-      default:
-        break;
-    }
+    pages[button.id]();
   });
 });
 
