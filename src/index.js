@@ -15,8 +15,8 @@ const pages = {
   menu: displayMenu,
 };
 
-//get all the buttons
-const buttons = document.querySelectorAll("button");
+//get all the buttons in the nav alone
+const buttons = document.querySelectorAll("nav button");
 
 //check them against the Object pages and then call the related function
 buttons.forEach((button) => {
