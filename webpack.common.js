@@ -8,11 +8,11 @@ export default {
     filename: "main.js",
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
-    title: "Production",
   },
   plugins: [
     new HtmlwebpackPlugin({
       template: "./src/template.html",
+      //   title: "Production",
     }),
   ],
   module: {
