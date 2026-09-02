@@ -1,17 +1,14 @@
 import path from "node:path";
 import HtmlwebpackPlugin from "html-webpack-plugin";
+import { title } from "node:process";
 
 export default {
-  mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "main.js",
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
-  },
-  devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/template.html"],
+    title: "Production",
   },
   plugins: [
     new HtmlwebpackPlugin({
